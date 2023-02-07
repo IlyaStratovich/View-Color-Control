@@ -36,9 +36,9 @@ final class ViewController: UIViewController {
         blueColorBoard.text = String(format: "%.2f", blueColorSlider.value)
         updateColor()
     }
-    
     //MARK: = PrivateMethods
     private func updateColor() {
+        
         var red: CGFloat = 0
         var green: CGFloat = 0
         var blue: CGFloat = 0
@@ -46,20 +46,23 @@ final class ViewController: UIViewController {
         if redColorSlider.value > 0 {
             red = CGFloat(redColorSlider.value)
         }
+        
         if greenColorSlider.value > 0 {
             green = CGFloat(greenColorSlider.value)
         }
+        
         if blueColorSlider.value > 0 {
             blue = CGFloat(blueColorSlider.value)
         }
+        
         let color = UIColor(
             red: red,
             green: green,
             blue: blue,
             alpha: 1
         )
+        
         colorView.backgroundColor = color
     }
-
 }
 
